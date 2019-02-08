@@ -1,5 +1,16 @@
+<h1>Enter your name to login: </h1>
+
+
+  <% if flash[:notice] %>
+
+    <font color="red"><div class="notice"><%= flash[:notice] %></div><font>
+  <% end %>
+
 <%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
   <input name=name>
   <input type=submit value='login'>
 <% end %>
 
+<p>
+<%= link_to "Back to home page", '/' %>
+</p>
